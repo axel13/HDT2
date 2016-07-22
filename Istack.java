@@ -14,8 +14,16 @@ import java.util.Vector;
  */
 public interface Istack<E> {
     
-    public void push(E a);
+    /**
+     *
+     * @param data
+     */
+    public void push(E data);
     
+    /**
+     *
+     * @return
+     */
     public E pop();
     
   

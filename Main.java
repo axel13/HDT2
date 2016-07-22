@@ -6,12 +6,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Vector;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
  * @author Axel
@@ -23,10 +17,13 @@ public class Main {
      * @throws java.io.FileNotFoundException
      */
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        // TODO code application logic here
-        
+    // el "throws FileNotFoundException, IOException" se utilizo por sugerencia de netbeans
+    
+    //se crea un Vector donde se almacenaran las lineas del archivo
     Vector lines = new Vector();
-        
+    
+    //la lectura para un archivo .txt se obtuvo de un ejemplo compartido publicamente
+    // por el usuario de stackoverflow "Knubo" (se hicieron algunas modificaciones)
     BufferedReader br = new BufferedReader(new FileReader("datos.txt"));
     try {
         String line = br.readLine();
@@ -34,11 +31,11 @@ public class Main {
         while (line != null) {
             lines.add(line);
             line = br.readLine();
-        }
-        
+        }    
     } finally {
         br.close();
     }
+    
     
     Calculos cal = new Calculos();
     VectorStack pila = new VectorStack();

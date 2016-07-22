@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ejercicio;
 
 import java.util.Vector;
@@ -14,14 +10,19 @@ import java.util.Vector;
  */
 public class Calculos {
     
-   
-    int answer = 0;
+    private int answer = 0;
+
+    /**
+     * constructor
+     */
+        public Calculos(){}
     
-    public Calculos(){}
-    
-    
-    
-    
+    /**
+     *
+     * @param lineas
+     * @param pila
+     * @param resultados
+     */
     public void leer(Vector lineas, VectorStack pila, String[] resultados){
         
         String[] vLinea;
@@ -93,25 +94,46 @@ public class Calculos {
             
     }
         
-    
-    
-    
+    /**
+     * 
+     * @param a
+     * @param b
+     */
     public void suma(int a, int b){
         answer = a + b;
     }
     
+    /**
+     *
+     * @param a
+     * @param b
+     */
     public void resta(int a, int b){
         answer = b - a;
     }
     
+    /**
+     *
+     * @param a
+     * @param b
+     */
     public void mul(int a, int b){
         answer = a * b;
     }
     
+    /**
+     *
+     * @param a
+     * @param b
+     */
     public void div(int a, int b){
         answer = b / a;
     }
     
+    /**
+     *
+     * @return
+     */
     public int getAns(){
         return answer;
     }

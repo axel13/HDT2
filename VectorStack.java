@@ -10,21 +10,31 @@ import java.util.Vector;
 /**
  *
  * @author Axel
+ * @param <E>
  */
 public class VectorStack<E> implements Istack<E> {
     
     private Vector stack;
     
+    /**
+     *
+     */
     public VectorStack(){
         stack = new Vector();  
     }
 
-    @Override
+    /**
+     *
+     * @param a
+     */
     public void push(E a) {
         stack.add(a);
     }
 
-    @Override
+    /**
+     *
+     * @return
+     */
     public E pop() {
         
         Object last = stack.lastElement();
