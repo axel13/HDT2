@@ -10,6 +10,7 @@ import java.util.Vector;
 /**
  *
  * @author Axel
+ * @param <E>
  */
 public interface Istack<E> {
     

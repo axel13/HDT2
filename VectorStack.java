@@ -5,19 +5,31 @@
  */
 package ejercicio;
 
+import java.util.Vector;
+
 /**
  *
  * @author Axel
  */
-public class VectorStack implements iStack {
-
-    @Override
-    public void push(Object a) {
-        
+public class VectorStack<E> implements Istack<E> {
+    
+    private Vector stack;
+    
+    public VectorStack(){
+        stack = new Vector();  
     }
 
     @Override
-    public Object pop() {
+    public void push(E a) {
+        stack.add(a);
+    }
+
+    @Override
+    public E pop() {
+        
+        Object last = stack.lastElement();
+        stack.remove(stack.size()-1);     
+        return (E) last;
         
     }
     

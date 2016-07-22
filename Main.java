@@ -25,10 +25,10 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException, IOException {
         // TODO code application logic here
         
+    Vector lines = new Vector();
         
     BufferedReader br = new BufferedReader(new FileReader("datos.txt"));
     try {
-        Vector lines = new Vector();
         String line = br.readLine();
 
         while (line != null) {
@@ -41,6 +41,13 @@ public class Main {
     }
     
     Calculos cal = new Calculos();
+    VectorStack pila = new VectorStack();
+    String[] resultados = new String[lines.size()];
+    
+    cal.leer(lines, pila, resultados);
+    
+    System.out.println(resultados);
+    
     
     
     
