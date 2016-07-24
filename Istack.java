@@ -8,23 +8,22 @@ package ejercicio;
 import java.util.Vector;
 
 /**
- *
- * @author Axel
- * @param <E>
+Axel Mazariegos
+Gustavo Orellana
  */
 public interface Istack<E> {
-    
+
     /**
      *
      * @param data
      */
     public void push(E data);
-    
+
     /**
      *
      * @return
      */
     public E pop();
-    
-  
+
+
 }

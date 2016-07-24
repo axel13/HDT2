@@ -8,19 +8,19 @@ package ejercicio;
 import java.util.Vector;
 
 /**
- *
- * @author Axel
+Axel Mazariegos
+Gustavo Orellana
  * @param <E>
  */
 public class VectorStack<E> implements Istack<E> {
-    
+
     private Vector stack;
-    
+
     /**
      *
      */
     public VectorStack(){
-        stack = new Vector();  
+        stack = new Vector();
     }
 
     /**
@@ -36,12 +36,12 @@ public class VectorStack<E> implements Istack<E> {
      * @return
      */
     public E pop() {
-        
+
         Object last = stack.lastElement();
-        stack.remove(stack.size()-1);     
+        stack.remove(stack.size()-1);
         return (E) last;
-        
+
     }
-    
-    
+
+
 }
